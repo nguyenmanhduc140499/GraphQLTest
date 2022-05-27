@@ -1,5 +1,8 @@
-import { Person } from "./person.dto";
+import { InputType, Field } from '@nestjs/graphql';
+import { Person } from './person.dto';
 
+@InputType()
 export class CreatePersonDto extends Person {
-    createdAt: Date;
-  }
+  @Field(() => String)
+  createdAt?: Date;
+}
