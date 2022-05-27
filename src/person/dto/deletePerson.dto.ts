@@ -1,3 +1,7 @@
+import { InputType, Field } from '@nestjs/graphql';
+
+@InputType()
 export class UpdatePersonDto {
-  deletedAt: Date;
+  @Field(() => String, { nullable: true })
+  deletedAt?: Date;
 }
